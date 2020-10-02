@@ -3,9 +3,12 @@ document.getElementById("container").setAttribute("style", "padding: 10px");
 document.getElementById("zapati").setAttribute("style", "clear: both");
 document.getElementById("foot").setAttribute("style", "clear: both");
 
-var nav = document.getElementById("nehlavni");
-var main = document.getElementById("hlavni");
-var heder = document.getElementById("header");
+const nav = document.getElementById("nehlavni");
+const main = document.getElementById("hlavni");
+const heder = document.getElementById("header");
+const shrek = document.querySelector("img");
+const shrek2 = document.querySelector("img");
+
 /*
 nav.setAttribute("style", "padding: 5px");
 nav.style.width = "200px";
@@ -17,7 +20,7 @@ main.setAttribute("style", "padding: 5px");
 main.style.width = "600px";
 main.style.float = "right";
 
-nav.addEventListener("click", function(){
+nav.addEventListener("mouseenter", function(){
     nav.setAttribute("style", "padding: 5px");
     nav.style.width = "200px";
     nav.style.float = "left";
@@ -31,15 +34,28 @@ nav.addEventListener("click", function(){
     main.style.color = "red";
     console.log("kliknuti na navigaci");
 });
+document.getElementById("shrek").style.float = "left";
+document.getElementById("shrek").addEventListener("click", function(){
+        console.log("mys na tylerovi");
+        shrek.src = "forsenE.jpg";
+});
 
-main.addEventListener("click", function(){
+
+document.getElementById("shrek").addEventListener("mouseenter", function(){
+    console.log("Forsaan");
+    shrek.src = "tyler1.jpg";
+});
+
+main.style.padding = "12px";
+
+main.addEventListener("mouseenter", function(){
     main.setAttribute("style", "padding: 10px");
-    nav.style.width = "200px";
+    nav.style.width = "700px";
     nav.style.float = "left";
     nav.style.fontFamily = "Comic Sans MS";
-    //main.setAttribute("style", "padding: 5px");
-    main.style.width = "800px";
-    main.style.float = "right";
+    main.setAttribute("style", "padding: 5px");
+    main.style.width = "1000px";
+    main.style.float = "left";
     main.style.fontFamily = "Courier New";
     main.style.backgroundColor = "grey";
     nav.style.backgroundColor = "#EEE";
@@ -52,7 +68,7 @@ document.getElementById("nadpis1").addEventListener("click", function(){
     document.getElementById("foot").style.padding = "10px 0px 0px 0px";
     console.log("kliknuti na nadpis1");
 });
-document.getElementById("zapati").addEventListener("click", function(){
+document.getElementById("zapati").addEventListener("mouseenter", function(){
     main.style.backgroundColor = "white";
     nav.style.backgroundColor = "white";
     nav.style.color = "black";
