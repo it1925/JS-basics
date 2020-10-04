@@ -36,13 +36,13 @@ nav.addEventListener("mouseenter", function(){
 });
 document.getElementById("shrek").style.float = "left";
 document.getElementById("shrek").addEventListener("click", function(){
-        console.log("mys na tylerovi");
+        console.log("Forsaan");
         shrek.src = "forsenE.jpg";
 });
 
 
 document.getElementById("shrek").addEventListener("mouseenter", function(){
-    console.log("Forsaan");
+    console.log("mys na tylerovi");
     shrek.src = "tyler1.jpg";
 });
 
