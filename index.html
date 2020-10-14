@@ -461,9 +461,11 @@
             <p id="cas"></p>
           </div>
           <script>
-          function cas(){
           var d = new Date();
-          document.getElementById("cas").innerHTML = "dnes je " + d;
+          let den = ["neďele","pondělí","úterý","středa","čtvrtek","pátek","sobota"];
+          let mesic = ["leden","únor","březen","duben","květen","červen","červenec","srpen","září","říjen","listopad","prosinec"]
+          function cas(){
+          document.getElementById("cas").innerHTML = "dnes je " + d.getDay() + ". "+ d.getMonth() + ". " + den[d.getDay()] + " " + mesic[d.getMonth()];
         }
         cas();
           </script>
@@ -479,22 +481,23 @@
             <img src="img/hrad.webp" class="img-fluid" alt="foto" id="foto">
           </div>
           <script>
-          //let img = ["img/hrad.webp", "img/praha.jpg", "img/saromak.jpg", "img/vltav.jpg"];
+          let img = ["img/hrad.webp", "img/praha.jpg", "img/staromak.jpg", "img/vltava.jpg"];
 
             let obrazek = document.getElementById("foto")
               window.setInterval(function() {
                     let number=Math.floor(Math.random()*4);
+
                     if (number == 0){
-                      obrazek.src = "img/hrad.webp"
+                      obrazek.src = img[0];//"img/hrad.webp"
                     }
                     else if (number == 1) {
-                      obrazek.src = "img/praha.jpg"
+                      obrazek.src = img[1];//"img/praha.jpg"
                     }
                     else if (number == 2){
-                      obrazek.src = "img/staromak.jpg"
+                      obrazek.src = img[2];//"img/staromak.jpg"
                     }
                     else if (number == 3){
-                      obrazek.src = "img/vltava.jpg"
+                      obrazek.src = img[3];//"img/vltava.jpg"
                     }
 
             },3000);
