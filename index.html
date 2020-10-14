@@ -465,7 +465,7 @@
           let den = ["neďele","pondělí","úterý","středa","čtvrtek","pátek","sobota"];
           let mesic = ["leden","únor","březen","duben","květen","červen","červenec","srpen","září","říjen","listopad","prosinec"]
           function cas(){
-          document.getElementById("cas").innerHTML = "dnes je " + d.getDay() + ". "+ d.getMonth() + ". " + den[d.getDay()] + " " + mesic[d.getMonth()];
+          document.getElementById("cas").innerHTML = "dnes je " + d.getDay() + ". "+ d.getMonth() + ". " + den[d.getDay()] + " " + mesic[d.getMonth()] + " " + d.getHours() + ":" + d.getMinutes();
         }
         cas();
           </script>
